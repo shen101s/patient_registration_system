@@ -10,7 +10,7 @@ Ensure the following software is installed on your system:
 - Composer: Latest version
 - Node.js: >= 14.x
 - npm or yarn: Latest version
-- Database: MySQL/MariaDB or PostgreSQL
+- Database: MySQL
 - Web Server: Apache/Nginx
 
 ## Installation    
@@ -33,7 +33,17 @@ Ensure the following software is installed on your system:
 - Set Up Environment Variables: Copy the .env.example file to .env:
     <pre>
     cp .env.example .env</pre>
-
+    Add this inside .env file
+    <pre>
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_db_name
+    DB_USERNAME=your_db_user
+    DB_PASSWORD=your_db_pass
+    DB_CHARSET=utf8mb4
+    DB_COLLATION=utf8mb4_unicode_ci</pre>
+   
 - Generate Application Key:
     <pre>
     php artisan key:generate</pre>
